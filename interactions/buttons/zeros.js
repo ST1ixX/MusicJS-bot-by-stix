@@ -1,0 +1,17 @@
+const { ComponentType } = require("discord.js");
+
+module.exports = {
+
+    name: 'zeros',
+    type: ComponentType.Button,
+
+    async run(interaction) {
+
+        const user = interaction.user;
+
+        user.send('Вы поставили на 0 или 00 и выиграли. BP получены.');
+        
+        await interaction.reply({content: 'Вы нажали на кнопку нули.', ephemeral: true});
+
+    }
+};
